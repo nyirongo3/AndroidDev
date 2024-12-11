@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lavendor"
+    tools:context=".LibraryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/libraryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Development Resources"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Links Section -->
+        <TextView
+            android:id="@+id/linksTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Useful Links"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/libraryTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/link1Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Official Android Developer Docs"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/linksTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="openLink1" />
+
+        <Button
+            android:id="@+id/link2Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kotlin vs. Java for Android"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/link1Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="openLink2" />
+
+        <!-- Videos Section -->
+        <TextView
+            android:id="@+id/videosTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tutorial Videos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/link2Button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/video1Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YouTube: Android Basics (Java)"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/videosTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="openVideo1" />
+
+        <Button
+            android:id="@+id/video2Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YouTube: Advanced Android Development"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/video1Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="openVideo2" />
+
+        <!-- Footer -->
+        <TextView
+            android:id="@+id/footerNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy Learning!"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/video2Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

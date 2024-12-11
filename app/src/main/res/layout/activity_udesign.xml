@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lavendor"
+    tools:context=".UdesignActivity">
+
+    <!-- Nested Scroll View with ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <!-- Image at the Top -->
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/design"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mastering UI Design in Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topImage" />
+
+        <!-- Paragraph 1 -->
+        <TextView
+            android:id="@+id/paragraph1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="UI design in Android focuses on creating user interfaces that are both functional and visually appealing. It involves understanding how users interact with their devices and making their experience intuitive and enjoyable."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activityTitle" />
+
+        <!-- Paragraph 2 -->
+        <TextView
+            android:id="@+id/paragraph2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Android UI design involves a range of elements including layouts, views, buttons, images, text, and more. Choosing the right layout and components is key to creating an effective and responsive design for various screen sizes."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph1" />
+
+        <!-- Paragraph 3 -->
+        <TextView
+            android:id="@+id/paragraph3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="The most commonly used layouts in Android include LinearLayout, RelativeLayout, FrameLayout, and ConstraintLayout. Each layout offers different ways to position views and handle screen size variations."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph2" />
+
+        <!-- Paragraph 4 -->
+        <TextView
+            android:id="@+id/paragraph4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Responsiveness is an important aspect of Android UI design. It ensures that the layout adapts to different screen sizes, resolutions, and orientations, providing an optimal experience across devices."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph3" />
+
+        <!-- Paragraph 5 -->
+        <TextView
+            android:id="@+id/paragraph5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Moreover, Android offers tools like Android Studio’s Layout Editor to design UIs visually, while XML layout files are used to define the structure and appearance of the app’s interface programmatically."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph4" />
+
+        <!-- Button for interaction -->
+        <Button
+            android:id="@+id/learnMoreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn More"
+            android:textColor="@android:color/white"
+            android:background="@color/design_default_color_primary"
+            android:layout_marginTop="32dp"
+            android:onClick="onLearnMoreClicked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph5"
+            tools:ignore="OnClick" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

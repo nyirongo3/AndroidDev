@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lavendor"
+    tools:context=".BroadcastActivity">
+
+    <!-- Nested Scroll View with ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <!-- Image at the Top -->
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/broadcast"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Understanding Broadcast Receivers in Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topImage" />
+
+        <!-- Paragraph 1 -->
+        <TextView
+            android:id="@+id/paragraph1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="A BroadcastReceiver in Android is used to listen for broadcast messages from other applications or from the system itself. It allows apps to respond to various events such as incoming calls, battery status changes, or Wi-Fi connection changes."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activityTitle" />
+
+        <!-- Paragraph 2 -->
+        <TextView
+            android:id="@+id/paragraph2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="To use a BroadcastReceiver, you need to create a subclass of it and override its onReceive() method. The onReceive() method is triggered whenever the specified broadcast event occurs. You can also register the receiver dynamically or statically in the AndroidManifest.xml file."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph1" />
+
+        <!-- Paragraph 3 -->
+        <TextView
+            android:id="@+id/paragraph3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="There are two types of broadcasts: normal broadcasts and ordered broadcasts. Normal broadcasts are asynchronous and do not block other processes, while ordered broadcasts allow you to set the order in which receivers respond to the broadcast."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph2" />
+
+        <!-- Paragraph 4 -->
+        <TextView
+            android:id="@+id/paragraph4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="To send a broadcast, you can use the sendBroadcast() method. When creating your own broadcast messages, make sure to define an appropriate action and target the right receivers to listen for that action."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph3" />
+
+        <!-- Button for interaction -->
+        <Button
+            android:id="@+id/learnMoreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn More"
+            android:textColor="@android:color/white"
+            android:background="@color/design_default_color_primary"
+            android:layout_marginTop="32dp"
+            android:onClick="onLearnMoreClicked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph4"
+            tools:ignore="OnClick" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

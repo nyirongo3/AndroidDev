@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lavendor"
+    tools:context=".ActivitiesActivity">
+
+    <!-- Nested Scroll View with ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <!-- Image at the Top -->
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Understanding Activities in Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topImage" />
+
+        <!-- Paragraph 1 -->
+        <TextView
+            android:id="@+id/paragraph1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="In Android development, an Activity is a crucial component that represents a single screen with a user interface (UI). It acts as an entry point for interacting with the app. Activities are used to display UI elements like buttons, text fields, and other components, and they interact with the user."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activityTitle" />
+
+        <!-- Paragraph 2 -->
+        <TextView
+            android:id="@+id/paragraph2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="When you launch an Android application, the system initiates the main Activity. Activities are managed by the Android system, which ensures that the right Activity is displayed when needed. You can have multiple Activities in your app, and you can navigate between them by using Intents."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph1" />
+
+        <!-- Paragraph 3 -->
+        <TextView
+            android:id="@+id/paragraph3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Each Activity is associated with a lifecycle, which consists of several states such as created, started, resumed, paused, stopped, and destroyed. Understanding this lifecycle is essential for managing resources and ensuring that your app performs efficiently and smoothly."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph2" />
+
+        <!-- Paragraph 4 -->
+        <TextView
+            android:id="@+id/paragraph4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="To start an Activity, you use an Intent, which is a messaging object used to request an action from another app component. You can start a new Activity or communicate between Activities by passing data with Intents."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph3" />
+
+        <!-- Button for interaction -->
+        <Button
+            android:id="@+id/learnMoreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn More"
+            android:textColor="@android:color/white"
+            android:background="@color/design_default_color_primary"
+            android:layout_marginTop="32dp"
+            android:onClick="onLearnMoreClicked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph4"
+            tools:ignore="OnClick" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

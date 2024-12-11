@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lavendor"
+    tools:context=".NetworkingActivity">
+
+    <!-- Nested Scroll View with ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <!-- Image at the Top -->
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/networking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Understanding Networking in Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topImage" />
+
+        <!-- Paragraph 1 -->
+        <TextView
+            android:id="@+id/paragraph1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Networking in Android refers to the communication between devices over the internet, either locally or remotely. It allows Android apps to exchange data with servers, cloud platforms, or other devices to provide real-time information and functionality."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activityTitle" />
+
+        <!-- Paragraph 2 -->
+        <TextView
+            android:id="@+id/paragraph2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Android offers several networking tools and libraries to manage network connections. These include HttpURLConnection, Retrofit, and OkHttp, which provide different ways to handle HTTP requests, responses, and communication with APIs."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph1" />
+
+        <!-- Paragraph 3 -->
+        <TextView
+            android:id="@+id/paragraph3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="To perform network operations in Android, developers need to use AsyncTask, Handler, or Kotlin Coroutines to run networking operations on background threads, ensuring smooth UI performance and preventing blocking of the main thread."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph2" />
+
+        <!-- Paragraph 4 -->
+        <TextView
+            android:id="@+id/paragraph4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Common network operations include sending GET or POST requests, downloading data, uploading files, and handling JSON responses. Libraries like Retrofit simplify these operations by converting HTTP responses into objects and handling most of the networking code behind the scenes."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph3" />
+
+        <!-- Paragraph 5 -->
+        <TextView
+            android:id="@+id/paragraph5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="For secure communication, Android supports HTTPS, providing encryption between the client and the server. Additionally, developers can manage requests with custom headers, authentication tokens, and error handling to ensure data integrity and privacy."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph4" />
+
+        <!-- Button for interaction -->
+        <Button
+            android:id="@+id/learnMoreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn More"
+            android:textColor="@android:color/white"
+            android:background="@color/design_default_color_primary"
+            android:layout_marginTop="32dp"
+            android:onClick="onLearnMoreClicked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paragraph5"
+            tools:ignore="OnClick" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lavendor"
+    tools:context=".StorageActivity">
+
+  <!-- Nested Scroll View with ConstraintLayout -->
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:ignore="ExtraText">
+
+    <!-- Image at the Top -->
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/storage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/activityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Understanding Data Storage in Android"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topImage" />
+
+    <!-- Paragraph 1 -->
+    <TextView
+        android:id="@+id/paragraph1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Data storage in Android refers to the various methods and techniques used by Android applications to store and retrieve data. The data can either be stored locally on the device or remotely on a server or cloud."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityTitle" />
+
+    <!-- Paragraph 2 -->
+    <TextView
+        android:id="@+id/paragraph2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="There are several ways to store data in Android, including Shared Preferences for simple key-value pairs, SQLite databases for structured data, and files for larger data storage. Each method has its use cases depending on the type and amount of data being stored."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph1" />
+
+    <!-- Paragraph 3 -->
+    <TextView
+        android:id="@+id/paragraph3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Shared Preferences is used to store small pieces of data like user preferences, app settings, or user session information. It is best for storing lightweight, non-complex data such as strings, booleans, and integers."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph2" />
+
+    <!-- Paragraph 4 -->
+    <TextView
+        android:id="@+id/paragraph4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SQLite databases are more powerful and are used when an app needs to store more structured data in a relational format. SQLite provides a lightweight database engine that can store large amounts of data with complex relationships and support for querying."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph3" />
+
+    <!-- Paragraph 5 -->
+    <TextView
+        android:id="@+id/paragraph5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="For storing larger data like images, videos, or files, you can use the device's internal or external storage. Android provides APIs to handle file storage, allowing apps to create, read, and write files locally or on external storage like SD cards."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph4" />
+
+    <!-- Paragraph 6 -->
+    <TextView
+        android:id="@+id/paragraph6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="In addition, for cloud-based storage, Android apps can leverage services like Firebase, Google Drive, or custom APIs to store and retrieve data from the cloud, enabling users to access their data across devices and ensuring data persistence."
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph5" />
+
+    <!-- Button for interaction -->
+    <Button
+        android:id="@+id/learnMoreBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn More"
+        android:textColor="@android:color/white"
+        android:background="@color/design_default_color_primary"
+        android:layout_marginTop="32dp"
+        android:onClick="onLearnMoreClicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paragraph6"
+        tools:ignore="OnClick" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
